@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
-import Home from "./pages/Home2"
-import Profile from "./pages/Profile"
+import Home from "./pages/Home4-redux-thunk的使用"
+import Profile from "./pages/Profile3"
 
 export default class App extends PureComponent {
   render() {

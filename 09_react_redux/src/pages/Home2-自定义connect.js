@@ -1,6 +1,7 @@
 import React from 'react'
 
-import {connect} from "../utils/connect"
+// import {connect} from "../utils/connect"
+import {connect} from "../utils/testconnect"
 import {
   incAction,
   addAction
