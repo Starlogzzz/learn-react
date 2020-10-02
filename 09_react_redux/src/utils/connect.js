@@ -1,20 +1,20 @@
 import React, { PureComponent } from 'react'
-import store from './../store/index';
+// import store from './../store/index';
+import {StoreContext} from "./context"
 
 export function connect(mapStateToProps, mapDispatchToProp) {
   return function enhanceHOC(WrappedComponent) {
-    return class extends PureComponent {
-      constructor(props) {
-        super(props);
+    class EnhanceComponent extends PureComponent {
+      constructor(props, context) {
+        super(props, context);
         this.state = {
-          storeState: mapStateToProps(store.getState())
+          storeState: mapStateToProps(context.getState())
         }
       }
-
       componentDidMount() {
-        this.unsubscribe = store.subscribe(() => {
+        this.unsubscribe = this.context.subscribe(() => {
           this.setState({
-            storeState: mapStateToProps(store.getState())
+            storeState: mapStateToProps(this.context.getState())
           })
         })
       }
@@ -23,9 +23,11 @@ export function connect(mapStateToProps, mapDispatchToProp) {
       }
       render() {
         return <WrappedComponent {...this.props}
-                                 {...mapStateToProps(store.getState())}
-                                 {...mapDispatchToProp(store.dispatch)}/>
+                                 {...mapStateToProps(this.context.getState())}
+                                 {...mapDispatchToProp(this.context.dispatch)}/>
       }
     }
+    EnhanceComponent.contextType = StoreContext
+    return EnhanceComponent
   }
 }
