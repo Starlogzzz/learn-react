@@ -1,0 +1,14 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/01_learn react/react
+/01_learn react/react-16.13.1
+/02_learn/node_modules
+/03_learn_component/node_modules
+/04_style-in-react/node_modules
+/05_learn_antdesign/node_modules
+/06_learn_axios/node_modules
+/07_learn_transition/node_modules
+/08_learn_redux/node_modules
+/09_react_redux/node_modules
