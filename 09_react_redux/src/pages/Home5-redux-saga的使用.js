@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import {
   incAction,
   addAction,
-  getHomeMultidataAction
+  fetchHomeMultidataAction
 } from '../store/actionCreators'
 
 class Home extends PureComponent {
@@ -39,7 +39,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch(addAction(num));
   },
   getHomeMultidata() {
-    dispatch(getHomeMultidataAction);
+    dispatch(fetchHomeMultidataAction);
   }
 })
 

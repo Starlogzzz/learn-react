@@ -6,7 +6,8 @@ import {
   INCREMENT,
   DECREMENT,
   CHANGE_BANNERS,
-  CHANGE_RECOMMEND
+  CHANGE_RECOMMEND,
+  FETCH_HOME_MULTIDATA
 } from './constants.js';
 
 // export function addAction(num) {
@@ -52,7 +53,7 @@ export const changeRecommendAction = (recommends) => ({
   recommends
 })
 
-// redux-thunk中定义的action函数
+// redux-thunk中定义的action函数(中间件)
 export const getHomeMultidataAction = dispatch => {
   axios({
     url: "http://123.207.32.32:8000/home/multidata",
@@ -62,5 +63,10 @@ export const getHomeMultidataAction = dispatch => {
     dispatch(changeRecommendAction(data.recommend.list))
   })
   
+}
+
+// redux-saga拦截的action
+export const fetchHomeMultidataAction = {
+  type: FETCH_HOME_MULTIDATA
 }
 
