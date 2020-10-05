@@ -1,21 +1,24 @@
 import React, { PureComponent } from 'react'
 import { NavLink, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min'
+import { renderRoutes } from 'react-router-config';
 
-function AboutMoneyComponent(props) {
+export function AboutMoneyComponent(props) {
   return <h2>本公司拥有上百亿资产</h2>
 }
-function AboutFutureComponent(props) {
+export function AboutFutureComponent(props) {
   return <h2>本公司的未来一片光明</h2>
 }
-function AboutComponent(props) {
+export function AboutComponent(props) {
   return <h2>本公司背景深不可测</h2>
 }
-function JoinToComponent(props) {
+export function JoinToComponent(props) {
   return <h2>欢迎加入我们，啦啦啦~</h2>
 }
 
 export default class About extends PureComponent {
   render() {
+    console.log(this.props.route);
+    
     return (
       <div>
         <NavLink exact to="/about" activeClassName="about-active">公司背景</NavLink>
@@ -23,12 +26,13 @@ export default class About extends PureComponent {
         <NavLink exact to="/about/future" activeClassName="about-active">公司前途</NavLink>
         <button onClick={e => this.JoinUs()}>加入我们</button>
 
-        <Switch>
+        {/* <Switch>
         <Route exact path="/about" component={AboutComponent}/>
         <Route path="/about/money" component={AboutMoneyComponent}/>
         <Route path="/about/future" component={AboutFutureComponent}/>
         <Route path="/about/join" component={JoinToComponent}/>
-        </Switch>
+        </Switch> */}
+        {renderRoutes(this.props.route.routes)}
       </div>
     )
   }
