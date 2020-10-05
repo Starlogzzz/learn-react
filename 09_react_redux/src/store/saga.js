@@ -1,7 +1,7 @@
 import { takeEvery, put } from "redux-saga/effects"
 import axios from "axios"
-import { FETCH_HOME_MULTIDATA } from './constants';
-import { changeBannerAction, changeRecommendAction } from './actionCreators';
+import { FETCH_HOME_MULTIDATA } from './constants'; // 拦截action，想在action之前做操作的(action)
+import { changeBannerAction, changeRecommendAction } from './actionCreators'; // 拦截action，做完操作之后要触发的action
 
 
 function* fetchHomeDataAction(action) {
@@ -13,7 +13,7 @@ function* fetchHomeDataAction(action) {
   yield put(changeRecommendAction(recommends));
 }
 
-function* mySage() {
+function* mySage() { // 使用拦截action的action
   yield takeEvery(FETCH_HOME_MULTIDATA, fetchHomeDataAction)
 }
 

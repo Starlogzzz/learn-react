@@ -28,3 +28,9 @@ export default store;
 // const store = createStore(reducer);
 // const storeenhance = applyMiddleware(sagaMiddleWare);
 // sagaMiddleWare.run(saga)
+
+// import createSagaMiddleware from "redux-saga"; // 引入createSagaMiddleware用来创建saga中间件
+// const sagaMiddleWare = createSagaMiddleware(); // 使用createSagaMiddleware创建中间件
+// const enhance = applyMiddleware(sagaMiddleWare); // 使用applyMiddleware应用创建的saga中间件
+// sagaMiddleWare.run(saga); // 中间件放行
+// const store = createStore(reducer, enhance); // 创建store
