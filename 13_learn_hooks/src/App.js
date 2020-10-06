@@ -20,6 +20,10 @@ import RefHookDemo02 from './08-useRef的使用/02-useRef引用其他数据'
 import ForwarRef from './09-useImperativeHandle的使用/01-回顾forwardRed'
 import ImperativeHandleHook from './09-useImperativeHandle的使用/02-useImperativeHandle的使用';
 import LayoutEffectHook from './10-useLayoutEffect/useLayoutEffect的使用'
+import CustomLifeHookDemo01 from './11-自定义hook/01-自定义hook基本使用'
+import CustomLifeHookDemo02 from './11-自定义hook/02-自定义hook练习-Context共享'
+import CustomLifeHookDemo03 from './11-自定义hook/03-自定义hook练习-获取滚动位置'
+import CustomLifeHookDemo04 from './11-自定义hook/04-自定义hook练习-localStorage练习'
 
 export const PersonContext = createContext();
 export const ThemeContext = createContext();
@@ -80,8 +84,18 @@ export default class App extends PureComponent {
         {/* <ForwarRef/> */}
         {/* <ImperativeHandleHook/> */}
 
-        {/* useLayoutEffect */}
-        <LayoutEffectHook/>
+        {/* 10.useLayoutEffect */}
+        {/* <LayoutEffectHook/> */}
+
+        {/* 11.自定义hook */}
+        {/* <CustomLifeHookDemo01/> */}
+        {/* <PersonContext.Provider value={{name: "Starlog", age: 21}}>
+          <ThemeContext.Provider value={"sffsdfsdfv"}>
+            <CustomLifeHookDemo02/>
+          </ThemeContext.Provider>
+        </PersonContext.Provider> */}
+        {/* <CustomLifeHookDemo03/> */}
+        <CustomLifeHookDemo04/>
       </div>
     )
   }
