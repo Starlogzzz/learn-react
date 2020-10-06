@@ -17,6 +17,9 @@ import MemoHook from './07-useMemo的使用/01-useMemo使用'
 import MemoHookDemo02 from './07-useMemo的使用/02-useMemo传入子组件应用类型'
 import RefHookDemo01 from './08-useRef的使用/01-useRef引用dom'
 import RefHookDemo02 from './08-useRef的使用/02-useRef引用其他数据'
+import ForwarRef from './09-useImperativeHandle的使用/01-回顾forwardRed'
+import ImperativeHandleHook from './09-useImperativeHandle的使用/02-useImperativeHandle的使用';
+import LayoutEffectHook from './10-useLayoutEffect/useLayoutEffect的使用'
 
 export const PersonContext = createContext();
 export const ThemeContext = createContext();
@@ -71,7 +74,14 @@ export default class App extends PureComponent {
 
         {/* 8.useRef */}
         {/* <RefHookDemo01/> */}
-        <RefHookDemo02/>
+        {/* <RefHookDemo02/> */}
+
+        {/* 9.useImperativeHandle */}
+        {/* <ForwarRef/> */}
+        {/* <ImperativeHandleHook/> */}
+
+        {/* useLayoutEffect */}
+        <LayoutEffectHook/>
       </div>
     )
   }
