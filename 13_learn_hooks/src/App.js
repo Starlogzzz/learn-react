@@ -13,6 +13,10 @@ import Home from './05-useReducer的使用/Home'
 import CallbackHookDemo01 from './06-useCallback的使用/01_useCallback不能进行性能优化'
 import CallbackHookDemo02 from './06-useCallback的使用/02_useCallback进行性能优化'
 import UseCallBacndemo from './06-useCallback的使用/02-useCallback2demo'
+import MemoHook from './07-useMemo的使用/01-useMemo使用'
+import MemoHookDemo02 from './07-useMemo的使用/02-useMemo传入子组件应用类型'
+import RefHookDemo01 from './08-useRef的使用/01-useRef引用dom'
+import RefHookDemo02 from './08-useRef的使用/02-useRef引用其他数据'
 
 export const PersonContext = createContext();
 export const ThemeContext = createContext();
@@ -59,7 +63,15 @@ export default class App extends PureComponent {
         {/* 6.useCallback的使用 */}
         {/* <CallbackHookDemo01/> */}
         {/* <CallbackHookDemo02/> */}
-        <UseCallBacndemo/>
+        {/* <UseCallBacndemo/> */}
+
+        {/* 7.useMemo */}
+        {/* <MemoHook/> */}
+        {/* <MemoHookDemo02/> */}
+
+        {/* 8.useRef */}
+        {/* <RefHookDemo01/> */}
+        <RefHookDemo02/>
       </div>
     )
   }
