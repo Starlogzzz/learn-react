@@ -9,6 +9,10 @@ import HooksChangeTitle from './03-useEffect的使用/02-useEffect实现title的
 import UseEffectCancel from './03-useEffect的使用/03-useEffect模拟订阅和取消订阅'
 import MultiEffectHook from './03-useEffect的使用/04-多个useEffect一起使用'
 import ContextHook from './04-useContext的使用/useContext的使用'
+import Home from './05-useReducer的使用/Home'
+import CallbackHookDemo01 from './06-useCallback的使用/01_useCallback不能进行性能优化'
+import CallbackHookDemo02 from './06-useCallback的使用/02_useCallback进行性能优化'
+import UseCallBacndemo from './06-useCallback的使用/02-useCallback2demo'
 
 export const PersonContext = createContext();
 export const ThemeContext = createContext();
@@ -41,11 +45,21 @@ export default class App extends PureComponent {
         {/* {this.state.isShow && <UseEffectCancel/>}
         <button onClick={e => this.setState({isShow: !this.state.isShow})}>切换</button> */}
         {/* <MultiEffectHook/> */}
-        <PersonContext.Provider value={{name: "wuhudsm", age: 32}}>
+
+        {/* 4.useContext的使用 */}
+        {/* <PersonContext.Provider value={{name: "wuhudsm", age: 32}}>
           <ThemeContext.Provider value={{color: "red", fontSize: "30px"}}>
             <ContextHook/>
           </ThemeContext.Provider>
-        </PersonContext.Provider>
+        </PersonContext.Provider> */}
+
+        {/* 5.useReducer的使用 */}
+        {/* <Home/> */}
+
+        {/* 6.useCallback的使用 */}
+        {/* <CallbackHookDemo01/> */}
+        {/* <CallbackHookDemo02/> */}
+        <UseCallBacndemo/>
       </div>
     )
   }
