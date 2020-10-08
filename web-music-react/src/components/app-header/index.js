@@ -20,7 +20,7 @@ export default memo(function ZCAppHeader() {
       return <a href={item.link}>{item.title}</a>
     } else {
       return (
-        <NavLink to={item.link} >
+        <NavLink to={item.link}>
           {item.title}
           <i className="sprite_01 icon"></i>
         </NavLink>
