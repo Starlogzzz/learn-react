@@ -1,14 +1,15 @@
 import React, { memo, Fragment } from 'react'
 
 import {
+  footerLinks,
+  footerImages
+} from "@/common/local-data"
+
+import {
   FooterWrapper,
   FooterLeft,
   FooterRight
 } from "./style"
-import {
-  footerLinks,
-  footerImages
-} from "@/common/local-data"
 
 export default memo(function ZCAppFooter() {
   return (

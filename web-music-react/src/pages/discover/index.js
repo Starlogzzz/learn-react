@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react'
+import React, { memo } from 'react'
 
 
 import { discoverMenu } from "@/common/local-data";
@@ -15,16 +15,20 @@ export default memo(function ZCDiscover(props) {
   
   return (
     <DiscoverWrapper>
+      <div className="top">
         <TopMenu className="wrap-v1">
           {
             discoverMenu.map((item, index) => {
               return (
-                <NavLink key={item.title} to={item.link}>{item.title}</NavLink>
+                <div  key={item.title} className="item">
+                <NavLink to={item.link}>{item.title}</NavLink>
+                </div>
               )
             })
           }
         </TopMenu>
-        {renderRoutes(route.routes)}
+      </div>
+      {renderRoutes(route.routes)}
     </DiscoverWrapper>
   )
 })

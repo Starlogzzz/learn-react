@@ -72,7 +72,7 @@ body, textarea, select, input, button {
   background: url(../img/sprite_02.png) no-repeat 0 9999px;
 }
 
-.sprite_covor {
+.sprite_cover {
   background: url(../img/sprite_cover.png) no-repeat 0 9999px;
 }
 
@@ -104,4 +104,17 @@ body, textarea, select, input, button {
   bottom: 0;
   text-indent: -9999px;
   background: url(../img/sprite_cover.png) no-repeat -145px -57px;
+}
+
+.sprite_playbar {
+  background: url(../img/playbar_sprite.png) no-repeat 0 9999px;
+}
+
+.show-lyric .ant-message-notice-content {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+  background-color: rgba(0, 0, 0, .7);
+  color: #fff;
 }
