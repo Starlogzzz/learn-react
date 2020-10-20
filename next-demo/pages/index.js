@@ -1,5 +1,6 @@
 import React, { memo } from 'react'
 import AppLayout from "../components/app-layout"
+import Link from "next/link"
 import styles from "../styles/Home.module.css"
 
 export default memo(function Home() {
@@ -8,11 +9,15 @@ export default memo(function Home() {
       <h2 className={styles.title}>Home</h2>
       <h2>Banners</h2>
       <ul>
-        <li>推荐商品1</li>
-        <li>推荐商品2</li>
-        <li>推荐商品3</li>
-        <li>推荐商品4</li>
-        <li>推荐商品5</li>
+        {
+          [1,2,3,4].map((item, index) => {
+            return (
+              <Link href={`/recommend`}>
+                <li>{item}</li>
+              </Link>
+            )
+          })
+        }
       </ul>
     </div>
   )

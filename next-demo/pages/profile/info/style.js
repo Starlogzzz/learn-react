@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const ProfileWrapper = styled.div`
-  p{
+export const InfoWrapper = styled.div`
+  h2 {
     color: blueviolet;
   }
 `
