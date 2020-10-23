@@ -24,6 +24,7 @@ import CustomLifeHookDemo01 from './11-自定义hook/01-自定义hook基本使�
 import CustomLifeHookDemo02 from './11-自定义hook/02-自定义hook练习-Context共享'
 import CustomLifeHookDemo03 from './11-自定义hook/03-自定义hook练习-获取滚动位置'
 import CustomLifeHookDemo04 from './11-自定义hook/04-自定义hook练习-localStorage练习'
+import Home1 from './05-useReducer的使用/Home1'
 
 export const PersonContext = createContext();
 export const ThemeContext = createContext();
@@ -66,6 +67,7 @@ export default class App extends PureComponent {
 
         {/* 5.useReducer的使用 */}
         {/* <Home/> */}
+        <Home1/>
 
         {/* 6.useCallback的使用 */}
         {/* <CallbackHookDemo01/> */}
@@ -95,7 +97,7 @@ export default class App extends PureComponent {
           </ThemeContext.Provider>
         </PersonContext.Provider> */}
         {/* <CustomLifeHookDemo03/> */}
-        <CustomLifeHookDemo04/>
+        {/* <CustomLifeHookDemo04/> */}
       </div>
     )
   }

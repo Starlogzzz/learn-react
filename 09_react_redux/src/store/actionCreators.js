@@ -62,7 +62,6 @@ export const getHomeMultidataAction = dispatch => {
     dispatch(changeBannerAction(data.banner.list))
     dispatch(changeRecommendAction(data.recommend.list))
   })
-  
 }
 
 // redux-saga拦截的action

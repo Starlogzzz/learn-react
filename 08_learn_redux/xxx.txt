@@ -1,0 +1,91 @@
+卷 future 的文件夹 PATH 列表
+卷序列号为 885F-94BE
+E:.
+│  basic_redux.js
+│  index.js
+│  package.json
+│  xxx.txt
+│  yarn.lock
+│  
+├─node_modules
+│  │  .yarn-integrity
+│  │  
+│  ├─.bin
+│  │      loose-envify
+│  │      loose-envify.cmd
+│  │      
+│  ├─js-tokens
+│  │      CHANGELOG.md
+│  │      index.js
+│  │      LICENSE
+│  │      package.json
+│  │      README.md
+│  │      
+│  ├─loose-envify
+│  │      cli.js
+│  │      custom.js
+│  │      index.js
+│  │      LICENSE
+│  │      loose-envify.js
+│  │      package.json
+│  │      README.md
+│  │      replace.js
+│  │      
+│  ├─redux
+│  │  │  CHANGELOG.md
+│  │  │  index.d.ts
+│  │  │  LICENSE.md
+│  │  │  package.json
+│  │  │  README.md
+│  │  │  
+│  │  ├─dist
+│  │  │      redux.js
+│  │  │      redux.min.js
+│  │  │      
+│  │  ├─es
+│  │  │      redux.js
+│  │  │      redux.mjs
+│  │  │      
+│  │  ├─lib
+│  │  │      redux.js
+│  │  │      
+│  │  ├─node_modules
+│  │  │  └─.bin
+│  │  │          loose-envify
+│  │  │          loose-envify.cmd
+│  │  │          
+│  │  └─src
+│  │      │  applyMiddleware.js
+│  │      │  bindActionCreators.js
+│  │      │  combineReducers.js
+│  │      │  compose.js
+│  │      │  createStore.js
+│  │      │  index.js
+│  │      │  
+│  │      └─utils
+│  │              actionTypes.js
+│  │              isPlainObject.js
+│  │              warning.js
+│  │              
+│  └─symbol-observable
+│      │  CHANGELOG.md
+│      │  index.d.ts
+│      │  index.js
+│      │  license
+│      │  package.json
+│      │  readme.md
+│      │  
+│      ├─es
+│      │      index.js
+│      │      ponyfill.js
+│      │      
+│      └─lib
+│              index.js
+│              ponyfill.js
+│              
+└─store
+        actionCreators.js
+        constans.js
+        index.js
+        reducer.js
+        
