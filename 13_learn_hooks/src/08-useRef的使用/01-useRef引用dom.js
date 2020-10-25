@@ -1,13 +1,14 @@
-import React, { useRef, PureComponent } from 'react'
+import React, { useRef, PureComponent, forwardRef } from 'react'
 
 class RefCpn1 extends PureComponent {
   render() {
     return <h2>RefCpn1</h2>
   }
 }
-function RefCpn2() {
-  return <h2>RefCpn2</h2>
-}
+const RefCpn2 = forwardRef(function(props, ref) {
+  return <h2 ref={ref}>RefCpn2</h2>
+})
+
 export default function RefHookDemo01() {
   const h2Ref = useRef();
   const inputRef = useRef();
